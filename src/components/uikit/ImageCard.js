@@ -1,19 +1,21 @@
 import React from 'react'
-import {StyleSheet, Text, Image, View, ScrollView} from 'react-native'
+import {StyleSheet, Text, Image, View, TouchableOpacity} from 'react-native'
 import {width} from "../../../constants"
 
-const ImageCard = (props) => {
+const ImageCard = (props, onPress) => {
     const { h1, cover, container } = styles
     return (
-        <View style={container}>
-            <Image
-                style={cover}
-                source={{uri: props.image}}
-            />
-            <Text style={h1}>
-                {props.name}
-            </Text>
-        </View>
+        <TouchableOpacity onPress={onPress}>
+            <View style={container}>
+                <Image
+                    style={cover}
+                    source={{uri: props.image}}
+                />
+                <Text style={h1}>
+                    {props.name}
+                </Text>
+            </View>
+        </TouchableOpacity>
     )
 }
 

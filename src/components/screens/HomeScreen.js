@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {ScrollView, StyleSheet, View} from 'react-native'
-import {ImageCard, Header, Layout} from "./components/uikit/index"
+import {ImageCard, Header, Layout} from "../uikit/index"
+import {STARGATE_DETAILS} from "../routes";
 
 
 const url = 'https://gitlab.com/gHashTag/react-native-init/raw/master/db.json'
@@ -8,6 +9,7 @@ const url = 'https://gitlab.com/gHashTag/react-native-init/raw/master/db.json'
 export default class App extends Component {
     state = {
         title: 'STAR GATE',
+        data: []
     }
 
     componentDidMount = async() => {
@@ -18,7 +20,7 @@ export default class App extends Component {
     }
 
     render() {
-        console.log('state', this.state)
+        console.log(this.props)
         return (
             <View style={{flex: 1}}>
                 <Header
@@ -30,6 +32,7 @@ export default class App extends Component {
                                 key={i.id}
                                 image={i.image}
                                 name={i.name}
+                                onPress={this.props.navigation.navigate(STARGATE_DETAILS, (this.state.data))}
                             />
                         )}
                 </Layout>

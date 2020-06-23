@@ -9,10 +9,11 @@
     "android": "react-native run-android",
     "lint": "esw src/**",
     "lint-watch": "esw -w --changed src/**",
-    "postinstall":"cd ./ios && pod install && cd .."
+    "postinstall": "cd ./ios && pod install && cd .."
   },
   "precommit": "lint",
   "dependencies": {
+    "@react-navigation/native": "^5.5.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "babel-preset-airbnb": "^5.0.0",
@@ -31,7 +32,8 @@
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
     "react": "16.11.0",
-    "react-native": "0.62.2"
+    "react-native": "0.62.2",
+    "react-navigation": "^2.18.3"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
