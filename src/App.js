@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {ScrollView, StyleSheet, View} from 'react-native'
-import {ImageCard, Header} from "./components/uikit/index"
+import {ImageCard, Header, Layout} from "./components/uikit/index"
 
 
 const url = 'https://gitlab.com/gHashTag/react-native-init/raw/master/db.json'
@@ -24,8 +24,7 @@ export default class App extends Component {
                 <Header
                     title={this.state.title}
                 />
-                <ScrollView>
-                    <View style={styles.imageContainer}>
+                <Layout>
                         {this.state.data && this.state.data.map( i =>
                             <ImageCard
                                 key={i.id}
@@ -33,18 +32,11 @@ export default class App extends Component {
                                 name={i.name}
                             />
                         )}
-                    </View>
-                </ScrollView>
+                </Layout>
+
             </View>
         )
     }
 }
 
-const styles = StyleSheet.create({
-    imageContainer: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-    }
-})
 
