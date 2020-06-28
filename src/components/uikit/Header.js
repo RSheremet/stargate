@@ -23,7 +23,7 @@ export { Header }
 const styles = StyleSheet.create({
     viewStyle: {
         backgroundColor: '#30d0fe',
-        height: 116,
+        height: 80,
         justifyContent: 'flex-start',
         alignItems: 'flex-end',
         paddingLeft: 22,

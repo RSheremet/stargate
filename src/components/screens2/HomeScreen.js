@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import {View} from 'react-native'
 import {ImageCard, Header, Layout} from "../uikit/index"
-import {STARGATE_DETAILS} from "../routes";
+import {BATMAN_DETAILS} from "../routes";
 
 
 const url = 'https://gitlab.com/gHashTag/react-native-init/raw/master/db.json'
 
 export default class App extends Component {
     state = {
-        title: 'STAR GATE',
+        title: 'BATMAN',
         data: []
     }
 
