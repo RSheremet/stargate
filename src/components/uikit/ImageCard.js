@@ -2,10 +2,10 @@ import React from 'react'
 import {StyleSheet, Text, Image, View, TouchableOpacity} from 'react-native'
 import {width} from "../../../constants"
 
-const ImageCard = (props, onPress) => {
+const ImageCard = (props) => {
     const { h1, cover, container } = styles
     return (
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity onPress={props.navigation}>
             <View style={container}>
                 <Image
                     style={cover}

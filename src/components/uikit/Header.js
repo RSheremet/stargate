@@ -1,10 +1,19 @@
 import React from 'react'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import Ionicons from "react-native-vector-icons/Ionicons";
+import {width} from '../../../constants'
 
-const Header = ({title}) => {
+const Header = ({title, goBack}) => {
     return (
         <View style={styles.viewStyle}>
-            <Text style={styles.textStyle}>{title}</Text>
+            <TouchableOpacity onPress={() => {goBack()}}>
+                <Ionicons name={'ios-arrow-back'} style={styles.ButtonStyle} color={'#fff'}/>
+            </TouchableOpacity>
+            <Text style={styles.textStyle}>
+                { ((title).length > 25) ?
+                    (((title).substring(0,25-3)) + '...') :
+                    title }
+            </Text>
         </View>
     )
 }
@@ -15,19 +24,25 @@ const styles = StyleSheet.create({
     viewStyle: {
         backgroundColor: '#30d0fe',
         height: 116,
-        justifyContent: 'flex-end',
-        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-end',
         paddingLeft: 22,
         paddingBottom: 10,
         shadowColor: '#fff',
         shadowOffset: { width: 0, height: 2},
         shadowOpacity: 0.2,
         elevation: 2,
-        position: 'relative'
+        position: 'relative',
+        flexDirection: 'row',
     },
     textStyle: {
         color: '#fff',
         fontSize: 28,
-        fontFamily: 'AvenirNext-DemiBold'
+        fontFamily: 'AvenirNext-DemiBold',
+    },
+    ButtonStyle: {
+        fontSize: 25,
+        paddingBottom: 5,
+        marginRight: 10,
     }
 })

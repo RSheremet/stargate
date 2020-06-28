@@ -28,11 +28,15 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "eslint-plugin-react-native": "^3.8.1",
     "eslint-watch": "^7.0.0",
+    "link": "^0.1.5",
     "pre-commit": "^1.2.2",
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
     "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react-native": "^0.62.2",
+    "react-native-render-html": "^4.2.0",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-webview": "^10.3.2",
     "react-navigation": "^2.18.3"
   },
   "devDependencies": {

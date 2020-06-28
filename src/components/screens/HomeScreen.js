@@ -16,11 +16,9 @@ export default class App extends Component {
         const response = await fetch(url)
         const data = await response.json()
         this.setState({data})
-
     }
 
     render() {
-        console.log(this.props)
         return (
             <View style={{flex: 1}}>
                 <Header
@@ -32,7 +30,7 @@ export default class App extends Component {
                                 key={i.id}
                                 image={i.image}
                                 name={i.name}
-                                onPress={this.props.navigation.navigate(STARGATE_DETAILS, (this.state.data))}
+                                navigation={() => this.props.navigation.navigate(STARGATE_DETAILS, (this.state.data, i))}
                             />
                         )}
                 </Layout>
