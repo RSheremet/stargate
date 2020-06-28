@@ -1,8 +1,8 @@
 import React from 'react'
-import One from './src/screens1'
-import Two from './src/screens2'
-import Three from './src/screens3'
-import {createBottomTabNavigator} from "react-navigation";
+import {createBottomTabNavigator} from "react-navigation"
+import One from './src/components/screens/index'
+import Two from './src/components/screens2/index'
+import Three from './src/components/screens3/index'
 
 export default createBottomTabNavigator(
     {

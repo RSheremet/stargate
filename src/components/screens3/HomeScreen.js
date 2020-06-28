@@ -30,7 +30,7 @@ export default class App extends Component {
                                 key={i.id}
                                 image={i.image}
                                 name={i.name}
-                                navigation={() => this.props.navigation.navigate(STARGATE_DETAILS, (this.state.data, i))}
+                                navigation={() => this.props.navigation.navigate(SPIDER_DETAILS, (this.state.data, i))}
                             />
                         )}
                 </Layout>

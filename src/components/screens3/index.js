@@ -3,13 +3,13 @@ import HomeScreen from './HomeScreen'
 import DetailsScreen from "./DetailsScreen"
 import {
     SPIDER_HOME,
-    SPIDER_DETAILS_DETAILS
+    SPIDER_DETAILS
 } from "../routes";
 
 export default createStackNavigator(
     {
         [SPIDER_HOME]: HomeScreen,
-        [SPIDER_DETAILS_DETAILS]: DetailsScreen,
+        [SPIDER_DETAILS]: DetailsScreen,
     },
     {
         headerMode: 'none'
