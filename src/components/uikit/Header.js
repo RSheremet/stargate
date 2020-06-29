@@ -1,14 +1,14 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
-import Ionicons from "react-native-vector-icons/Ionicons";
-import {width} from '../../../constants'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const Header = ({title, goBack}) => {
     return (
         <View style={styles.viewStyle}>
+            {title === 'STAR GATE' || title === 'BATMAN' || title === 'SPIDERMAN' ? <View /> :
             <TouchableOpacity onPress={() => {goBack()}}>
                 <Ionicons name={'ios-arrow-back'} style={styles.ButtonStyle} color={'#fff'}/>
-            </TouchableOpacity>
+            </TouchableOpacity>}
             <Text style={styles.textStyle}>
                 { ((title).length > 25) ?
                     (((title).substring(0,25-3)) + '...') :
